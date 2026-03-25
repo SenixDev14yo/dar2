@@ -1,9 +1,9 @@
 {
   "name": "darital",
   "version": "1.0.0",
-  "description": "Корпоративный сайт компании Darital",
+  "private": true,
   "scripts": {
-    "build": "cd client && npm run build"
+    "build": "cd client && npm install && npm run build"
   },
   "dependencies": {},
   "devDependencies": {}
