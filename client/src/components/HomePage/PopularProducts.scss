@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.popular-products {
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    
+    @include respond-to(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include respond-to(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .section-cta {
+    text-align: center;
+    margin-top: 50px;
+    
+    .btn svg {
+      margin-left: 8px;
+      transition: $transition;
+    }
+    
+    .btn:hover svg {
+      transform: translateX(5px);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+
+.stats {
+  position: relative;
+  padding: 70px 0;
+  overflow: hidden;
+  
+  .stats-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(41, 151, 255, 0.08) 0%, transparent 50%);
+  }
+  
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    
+    @include respond-to(md) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+  }
+  
+  .stat-item {
+    text-align: center;
+    
+    .stat-value {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+  }
+}

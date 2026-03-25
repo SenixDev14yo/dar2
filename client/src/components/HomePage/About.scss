@@ -1,0 +1,104 @@
+@import '../../styles/variables';
+
+.about {
+  background: var(--bg-secondary);
+  
+  &-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+    
+    @include respond-to(lg) {
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+  }
+  
+  &-image {
+    position: relative;
+    
+    img {
+      width: 100%;
+      border-radius: $radius-xl;
+    }
+    
+    .about-experience {
+      position: absolute;
+      bottom: 24px;
+      left: -20px;
+      background: var(--accent);
+      padding: 20px 24px;
+      border-radius: $radius-lg;
+      text-align: center;
+      
+      .exp-num {
+        display: block;
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1;
+      }
+      
+      .exp-text {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 500;
+      }
+    }
+  }
+  
+  &-text {
+    .about-tag {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    
+    h2 {
+      color: var(--text-primary);
+      margin-bottom: 18px;
+      font-size: 1.8rem;
+      
+      span {
+        color: var(--accent);
+      }
+    }
+    
+    p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+  }
+  
+  &-features {
+    margin-bottom: 28px;
+  }
+  
+  .about-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    
+    .feature-icon {
+      width: 22px;
+      height: 22px;
+      background: rgba(41, 151, 255, 0.15);
+      color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+    }
+  }
+}
